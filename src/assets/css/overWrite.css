@@ -1,0 +1,35 @@
+/* 阻止代码闪现问题 */
+[v-cloak] {
+    display: none;
+}
+
+/*活动页字体*/
+@font-face {
+    font-family: 'webfont';
+    src: url('//at.alicdn.com/t/webfont_okbs0a4ub2h.eot');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/webfont_okbs0a4ub2h.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('//at.alicdn.com/t/webfont_okbs0a4ub2h.woff') format('woff'),
+        /* chrome、firefox */
+        url('//at.alicdn.com/t/webfont_okbs0a4ub2h.ttf') format('truetype'),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('//at.alicdn.com/t/webfont_okbs0a4ub2h.svg#after') format('svg');
+    /* iOS 4.1- */
+}
+
+
+
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

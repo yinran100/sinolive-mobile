@@ -1,0 +1,15 @@
+stages:
+  - build
+
+variables:
+  AccessKey_ID: $AccessKey_ID
+  Access_Key_Secret: $Access_Key_Secret
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - node upload/upload-to-oss.js
+  tags:
+    - build
